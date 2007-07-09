@@ -1,0 +1,8 @@
+module l1GtAnalyz = L1GtAnalyzer {
+ 
+    // input tag for GT readout collection: 
+    //     l1GtEmulDigis = GT emulator, 
+    //     l1GtUnpack    = GT unpacker 
+    untracked InputTag GtInputTag = l1GtEmulDigis
+
+}
