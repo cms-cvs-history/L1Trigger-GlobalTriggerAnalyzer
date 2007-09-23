@@ -1,0 +1,17 @@
+module l1GtTrigReport = L1GtTrigReport {
+ 
+    // input tag for GT readout collection (DAQ record): 
+    //     GT emulator: l1GtEmulDigis 
+    //     GT unpacker: l1GtUnpack   
+    untracked InputTag L1GtDaqInputTag = l1GtEmulDigis
+    
+    // inputTag for L1 Global Trigger object maps
+    //   only the emulator produces the object maps
+    //   GT Emulator = l1GtEmulDigis
+    //
+    untracked InputTag L1GtObjectMapTag = l1GtEmulDigis
+    
+    
+    
+
+}
