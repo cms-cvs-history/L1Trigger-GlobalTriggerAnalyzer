@@ -1,8 +1,24 @@
 module l1GtAnalyz = L1GtAnalyzer {
  
     // input tag for GT readout collection: 
-    //     l1GtEmulDigis = GT emulator, 
-    //     l1GtUnpack    = GT unpacker 
-    untracked InputTag GtInputTag = l1GtEmulDigis
+    //     GT emulator:  l1GtEmulDigis  
+    //     GT unpacker:  l1GtUnpack  
+    untracked InputTag DaqGtInputTag = l1GtEmulDigis
 
+    // input tag for GT object map collection
+    //     only the L1 GT emulator produces it,
+    //     no map collection is produced by hardware
+    //
+    //     GT emulator:  l1GtEmulDigis  
+    untracked InputTag GtObjectMapTag = l1GtEmulDigis
+
+    // input tag for GMT readout collection: 
+    //     l1GmtEmulDigis = GMT emulator
+    //     l1GtUnpack     = GT unpacker (common GT/GMT unpacker)
+    untracked InputTag GmtInputTag = l1GmtEmulDigis 
+
+    // an algorithm and a condition in that algorithm to test the object maps
+    string AlgorithmName = "L1_DoubleJet50_ETM20"
+    string ConditionName = "DoubleTauJet50_2"
+    
 }
