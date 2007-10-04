@@ -1,17 +1,26 @@
 module l1GtTrigReport = L1GtTrigReport {
  
     // input tag for GT readout collection (DAQ record): 
-    //     GT emulator: l1GtEmulDigis 
-    //     GT unpacker: l1GtUnpack   
-    untracked InputTag L1GtDaqInputTag = l1GtEmulDigis
+    //   GT emulator: l1GtEmulDigis 
+    //   GT unpacker: l1GtUnpack   
+    InputTag L1GtDaqInputTag = l1GtEmulDigis
     
     // inputTag for L1 Global Trigger object maps
     //   only the emulator produces the object maps
     //   GT Emulator = l1GtEmulDigis
     //
-    untracked InputTag L1GtObjectMapTag = l1GtEmulDigis
+    InputTag L1GtObjectMapTag = l1GtEmulDigis
     
-    
-    
+    // print verbosity
+    //   Level 0: TriggerKey, AlgorithmKey, Bit#, Passed, Rejected
+    //   Level 1: Level 0 + PrescaleFactors + Mask
+    //   ... 
+    untracked int32 PrintVerbosity = 0
 
+    // print output
+    //   0 std::cout
+    //   1 LogTrace
+    //   2 LogVerbatim
+    untracked int32 PrintOutput = 0
+    
 }
