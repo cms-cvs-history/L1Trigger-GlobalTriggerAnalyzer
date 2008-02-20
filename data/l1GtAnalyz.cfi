@@ -1,16 +1,16 @@
 module l1GtAnalyz = L1GtAnalyzer {
  
     // input tag for GT readout collection: 
-    //     GT emulator:  l1GtEmulDigis  
+    //     GT emulator:  gtDigis  
     //     GT unpacker:  l1GtUnpack  
-    untracked InputTag DaqGtInputTag = l1GtEmulDigis
+    untracked InputTag DaqGtInputTag = gtDigis
 
     // input tag for GT object map collection
     //     only the L1 GT emulator produces it,
     //     no map collection is produced by hardware
     //
-    //     GT emulator:  l1GtEmulDigis  
-    untracked InputTag GtObjectMapTag = l1GtEmulDigis
+    //     GT emulator:  gtDigis  
+    untracked InputTag GtObjectMapTag = gtDigis
 
     // input tag for GMT readout collection: 
     //     l1GmtEmulDigis = GMT emulator
