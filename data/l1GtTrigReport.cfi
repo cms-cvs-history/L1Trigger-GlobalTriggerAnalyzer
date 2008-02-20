@@ -1,9 +1,9 @@
 module l1GtTrigReport = L1GtTrigReport {
  
     // input tag for GT readout collection (DAQ record): 
-    //   GT emulator: l1GtEmulDigis 
-    //   GT unpacker: l1GtUnpack   
-    InputTag L1GtDaqInputTag = l1GtEmulDigis
+    //   GT emulator: gtDigis 
+    //   GT unpacker: gtDigis  
+    InputTag L1GtDaqInputTag = gtDigis
     
     // print verbosity
     //   Level 0: TriggerKey, AlgorithmKey, Bit#, Passed, Rejected
