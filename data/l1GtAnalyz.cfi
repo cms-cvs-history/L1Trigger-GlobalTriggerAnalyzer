@@ -13,9 +13,9 @@ module l1GtAnalyz = L1GtAnalyzer {
     untracked InputTag GtObjectMapTag = gtDigis
 
     // input tag for GMT readout collection: 
-    //     l1GmtEmulDigis = GMT emulator
+    //     gmtDigis = GMT emulator
     //     l1GtUnpack     = GT unpacker (common GT/GMT unpacker)
-    untracked InputTag GmtInputTag = l1GmtEmulDigis 
+    untracked InputTag GmtInputTag = gmtDigis 
 
     // an algorithm and a condition in that algorithm to test the object maps
     string AlgorithmName = "L1_DoubleJet50_ETM20"
