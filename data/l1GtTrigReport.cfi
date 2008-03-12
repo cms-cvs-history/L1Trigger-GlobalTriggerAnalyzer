@@ -1,13 +1,27 @@
 module l1GtTrigReport = L1GtTrigReport {
  
-    // input tag for GT readout collection (DAQ record): 
-    //   GT emulator: gtDigis 
-    //   GT unpacker: gtDigis  
-    InputTag L1GtDaqInputTag = gtDigis
+    // boolean flag to select the input record
+    // if true, it will use L1GlobalTriggerRecord 
+    bool UseL1GlobalTriggerRecord = false
+
+    // input tag for GT record: 
+    //   GT emulator:    gtDigis (DAQ record)
+    //   GT unpacker:    gtDigis (DAQ record)
+    //   GT lite record: l1GtRecord 
+    InputTag L1GtRecordInputTag = gtDigis
     
     // print verbosity
-    //   Level 0: TriggerKey, AlgorithmKey, Bit#, Passed, Rejected
-    //   Level 1: Level 0 + PrescaleFactors + Mask
+    //   Level 0 Physics Partition:  TriggerKey, AlgorithmKey, Passed, Rejected, Error
+    //   Level 1 Physics Partition:  Level 0 + PrescaleFactors + Mask
+    //
+    //   Level 10 Physics Partition: TriggerKey, AlgorithmKey, PrescaleFactors
+    //                               Before masks: Passed, Rejected, 
+    //                               Mask
+    //                               After masks:  Passed, Rejected,
+    //                               Error
+    //
+    //   Level 100 All Partitions:   TriggerKey, AlgorithmKey, Passed, Rejected, Error
+    //   Level 101 All Partitions:   Level 100 + PrescaleFactors + Mask
     //   ... 
     untracked int32 PrintVerbosity = 0
 
