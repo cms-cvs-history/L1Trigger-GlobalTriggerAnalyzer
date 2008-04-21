@@ -4,6 +4,10 @@ module l1GtAnalyz = L1GtAnalyzer {
     //     GT emulator:  gtDigis  
     //     GT unpacker:  l1GtUnpack  
     InputTag DaqGtInputTag = gtDigis
+    
+    // input tags for GT lite record
+    //     L1 GT lite record producer:  l1GtRecord  
+    InputTag L1GtRecordInputTag = l1GtRecord
 
     // input tag for GT object map collection
     //     only the L1 GT emulator produces it,
